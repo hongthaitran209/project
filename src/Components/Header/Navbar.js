@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from "react-router-dom";
 
 export default class NavBar extends Component {
     render() {
@@ -6,9 +7,9 @@ export default class NavBar extends Component {
 
             <div className="my-navbar">
                 <nav className="navbar navbar-expand-sm d-flex justify-content-center align-items-center">
-                    <a href="#" className="navbar__logo">
+                <Link to="/" className="navbar__logo">
                         <img src="http://learningzone.themescustom.com/theme/image.php/learningzone/theme/1556102214//logo" alt="logo" />
-                    </a>
+                    </Link>
                     <ul className="navbar-nav d-flex justify-content-center align-items-center">
                         <li className="nav-item">
                             <a className="nav-link home" href="#">
@@ -60,7 +61,8 @@ export default class NavBar extends Component {
                         </li>
                     </ul>
                     <span>This is the guest access</span>
-                    <a href="#" className="log-in">Log in</a>
+                    <Link to="/sign-in" className="log-in">Sign in</Link>
+                    <Link to="/sign-up" className="log-in">Sign up</Link>
                 </nav>
 
                 <div className="navbar-bottom">
